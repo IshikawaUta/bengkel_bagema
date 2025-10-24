@@ -20,8 +20,8 @@ export function Logo({ className, onClick }: LogoProps) {
       <Image 
         src="https://res.cloudinary.com/dzsqaauqn/image/upload/v1761271214/WhatsApp_Image_2025-10-21_at_20.03.01-removebg-preview_admdnw.png"
         alt="Bengkel Bagema Logo"
-        width={100}
-        height={22}
+        width={80}
+        height={18}
         priority
       />
     </Link>
