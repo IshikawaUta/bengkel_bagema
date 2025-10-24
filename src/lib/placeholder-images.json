@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A workshop with tools and a car being repaired.",
+      "imageUrl": "https://images.unsplash.com/photo-1545732870-5dced7323d26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b3Jrc2hvcCUyMHJlcGFpcnxlbnwwfHx8fDE3NjEyNzAzMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "workshop repair"
+    },
+    {
+      "id": "about",
+      "description": "The team of mechanics working together.",
+      "imageUrl": "https://images.unsplash.com/photo-1610409013143-43b30fb828f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVjaGFuaWNzfGVufDB8fHx8MTc2MTI3MDMyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team mechanics"
+    },
+    {
+      "id": "employee1",
+      "description": "Portrait of a male employee.",
+      "imageUrl": "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjEyNTU5NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "employee2",
+      "description": "Portrait of a female employee.",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjEyNTg3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "employee3",
+      "description": "Portrait of a male employee smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1623184663110-89ba5b565eb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2MTIzNzY3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "employee4",
+      "description": "Portrait of a senior employee.",
+      "imageUrl": "https://images.unsplash.com/photo-1694654359742-58382d5d9742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZW5pb3IlMjBtYW58ZW58MHx8fHwxNzYxMjcwMzI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "senior man"
+    }
+  ]
 }
