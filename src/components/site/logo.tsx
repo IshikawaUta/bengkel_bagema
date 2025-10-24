@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type LogoProps = {
@@ -13,12 +13,17 @@ export function Logo({ className, onClick }: LogoProps) {
       href="/"
       onClick={onClick}
       className={cn(
-        "flex items-center gap-2 text-xl font-bold font-headline text-primary",
+        "flex items-center gap-2",
         className
       )}
     >
-      <Wrench className="h-6 w-6" />
-      <span>Bengkel Bagema</span>
+      <Image 
+        src="https://res.cloudinary.com/dzsqaauqn/image/upload/v1761270951/WhatsApp_Image_2025-10-21_at_20.03.01_b8sec9.jpg" 
+        alt="Bengkel Bagema Logo" 
+        width={140} 
+        height={35}
+        className="object-contain"
+      />
     </Link>
   );
 }
