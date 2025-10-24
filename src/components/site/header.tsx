@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Wrench } from "lucide-react";
+import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -23,36 +23,35 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
-        <div className="mr-4 hidden md:flex">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-lg">
+      <div className="container flex h-16 items-center">
+        <div className="mr-6 hidden md:flex">
           <Logo />
         </div>
         
-        {/* Mobile Menu */}
-        <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+        {/* Mobile Menu Trigger */}
+        <div className="md:hidden flex-1">
+           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
-              <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                <Wrench className="mr-2 h-6 w-6 text-primary" />
-                <span className="font-bold text-lg">Bengkel Bagema</span>
-              </Link>
-              <nav className="mt-8 flex flex-col space-y-4">
+            <SheetContent side="left" className="pr-0 w-full max-w-xs">
+              <div className="p-6">
+                <Logo onClick={() => setIsMobileMenuOpen(false)} />
+              </div>
+              <nav className="mt-4 flex flex-col space-y-2 px-6">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "text-lg font-medium",
+                      "rounded-md px-3 py-2 text-lg font-medium transition-colors",
                       pathname === item.href
-                        ? "text-primary"
-                        : "text-muted-foreground hover:text-foreground"
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:bg-gray-100 hover:text-foreground"
                     )}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -64,21 +63,36 @@ export function Header() {
           </Sheet>
         </div>
 
+        {/* Mobile Logo (centered) */}
+        <div className="flex-1 flex justify-center md:hidden">
+            <Logo />
+        </div>
+        <div className="flex-1 md:hidden" />
+
+
         {/* Desktop Menu */}
-        <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex flex-1 items-center space-x-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "transition-colors hover:text-primary",
-                pathname === item.href ? "text-foreground" : "text-muted-foreground"
+                "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                pathname === item.href 
+                  ? "text-primary" 
+                  : "text-muted-foreground hover:text-primary"
               )}
             >
               {item.label}
             </Link>
           ))}
         </nav>
+
+        <div className="hidden md:flex items-center justify-end">
+            <Button asChild>
+                <Link href="/kontak">Jadwalkan Servis</Link>
+            </Button>
+        </div>
       </div>
     </header>
   );

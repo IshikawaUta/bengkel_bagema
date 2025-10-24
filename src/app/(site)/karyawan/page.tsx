@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
@@ -33,9 +33,9 @@ const employees = [
 export default function EmployeesPage() {
   return (
     <>
-      <header className="py-16 sm:py-24 bg-card text-center">
+      <header className="py-20 sm:py-28 text-center bg-gray-50">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold">Tim Profesional Kami</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-gray-900">Tim Profesional Kami</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Bertemu dengan para ahli di balik layanan terbaik Bengkel Bagema.
           </p>
@@ -48,9 +48,9 @@ export default function EmployeesPage() {
               (img) => img.id === employee.imageId
             );
             return (
-              <Card key={employee.name} className="text-center shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                <CardContent className="pt-6">
-                  <Avatar className="h-32 w-32 mx-auto">
+              <Card key={employee.name} className="text-center shadow-sm border transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+                <CardContent className="pt-8">
+                  <Avatar className="h-32 w-32 mx-auto border-4 border-white shadow-lg">
                     {image && (
                       <AvatarImage
                         src={image.imageUrl}
@@ -60,7 +60,7 @@ export default function EmployeesPage() {
                     )}
                     <AvatarFallback>{employee.name.charAt(0)}</AvatarFallback>
                   </Avatar>
-                  <h3 className="mt-4 text-xl font-bold">{employee.name}</h3>
+                  <h3 className="mt-6 text-xl font-bold text-gray-900">{employee.name}</h3>
                   <p className="text-primary font-semibold">{employee.title}</p>
                   <p className="mt-2 text-sm text-muted-foreground">{employee.bio}</p>
                 </CardContent>
