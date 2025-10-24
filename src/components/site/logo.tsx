@@ -5,9 +5,12 @@ import Image from "next/image";
 type LogoProps = {
   className?: string;
   onClick?: () => void;
+  width?: number;
 };
 
-export function Logo({ className, onClick }: LogoProps) {
+export function Logo({ className, onClick, width = 50 }: LogoProps) {
+  const height = width * (14 / 60); // Maintain aspect ratio
+
   return (
     <Link
       href="/"
@@ -20,8 +23,8 @@ export function Logo({ className, onClick }: LogoProps) {
       <Image 
         src="https://res.cloudinary.com/dzsqaauqn/image/upload/v1761271214/WhatsApp_Image_2025-10-21_at_20.03.01-removebg-preview_admdnw.png"
         alt="Bengkel Bagema Logo"
-        width={60}
-        height={14}
+        width={width}
+        height={height}
         priority
       />
     </Link>

@@ -26,7 +26,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-lg">
       <div className="container flex h-20 items-center">
         <div className="mr-4 hidden md:flex">
-          <Logo />
+          <Logo width={50} />
         </div>
         
         {/* Mobile Menu Trigger */}
@@ -40,7 +40,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="pr-0 w-full max-w-xs">
               <div className="p-6">
-                <Logo onClick={() => setIsMobileMenuOpen(false)} />
+                <Logo onClick={() => setIsMobileMenuOpen(false)} width={50} />
               </div>
               <nav className="mt-4 flex flex-col space-y-2 px-6">
                 {navItems.map((item) => (
@@ -65,7 +65,7 @@ export function Header() {
 
         {/* Mobile Logo (centered) */}
         <div className="flex-1 flex justify-center md:hidden">
-            <Logo />
+            <Logo width={50} />
         </div>
         <div className="flex-1 md:hidden" />
 

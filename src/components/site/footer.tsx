@@ -62,7 +62,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and About */}
           <div className="md:col-span-1 space-y-4">
-            <Logo />
+            <Logo width={100} />
             <p className="text-sm text-muted-foreground max-w-xs">
               Solusi otomotif terpercaya untuk semua kebutuhan kendaraan Anda.
             </p>
