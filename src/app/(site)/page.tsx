@@ -69,7 +69,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {highlights.map((highlight, index) => (
-              <Card key={index} className="text-center shadow-sm border-t-4 border-primary transition-shadow duration-300 hover:shadow-lg">
+              <Card key={index} className="text-center shadow-sm border-t-4 border-primary transition-shadow duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
                     {highlight.icon}

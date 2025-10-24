@@ -48,7 +48,7 @@ export default function EmployeesPage() {
               (img) => img.id === employee.imageId
             );
             return (
-              <Card key={employee.name} className="text-center shadow-sm border transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+              <Card key={employee.name} className="text-center shadow-sm border transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
                 <CardContent className="pt-8">
                   <Avatar className="h-32 w-32 mx-auto border-4 border-white shadow-lg">
                     {image && (

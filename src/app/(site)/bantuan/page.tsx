@@ -44,7 +44,7 @@ export default function HelpPage() {
           <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b-0">
-                <div className="border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="border rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
                   <AccordionTrigger className="px-6 py-4 text-lg font-semibold text-left hover:no-underline rounded-lg">
                     {faq.question}
                   </AccordionTrigger>
