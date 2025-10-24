@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type LogoProps = {
   className?: string;
@@ -13,12 +13,17 @@ export function Logo({ className, onClick }: LogoProps) {
       href="/"
       onClick={onClick}
       className={cn(
-        "flex items-center gap-2 text-xl font-bold font-headline text-primary",
+        "flex items-center",
         className
       )}
     >
-      <Wrench className="h-6 w-6" />
-      Bengkel Bagema
+      <Image 
+        src="https://res.cloudinary.com/dzsqaauqn/image/upload/v1761271214/WhatsApp_Image_2025-10-21_at_20.03.01-removebg-preview_admdnw.png"
+        alt="Bengkel Bagema Logo"
+        width={180}
+        height={40}
+        priority
+      />
     </Link>
   );
 }
