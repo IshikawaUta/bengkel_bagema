@@ -7,7 +7,13 @@ import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { Logo } from "@/components/site/logo";
 
 const navItems = [
@@ -39,6 +45,8 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="pr-0 w-full max-w-xs">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <SheetDescription className="sr-only">Navigasi utama situs.</SheetDescription>
               <div className="p-6">
                 <Logo onClick={() => setIsMobileMenuOpen(false)} width={50} />
               </div>
@@ -65,7 +73,7 @@ export function Header() {
 
         {/* Mobile Logo (centered) */}
         <div className="flex-1 flex justify-center md:hidden">
-            <Logo width={50} />
+            <Logo width={60} />
         </div>
         <div className="flex-1 md:hidden" />
 
