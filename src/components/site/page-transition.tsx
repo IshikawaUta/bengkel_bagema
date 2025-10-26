@@ -12,7 +12,7 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Hide loader on initial load after a short delay
-    const timer = setTimeout(() => setLoading(false), 800);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
