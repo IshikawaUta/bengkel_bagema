@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const heroImage = PlaceHolderImages.find((img) => img.id === "hero");
 
@@ -25,7 +29,48 @@ const highlights = [
   },
 ];
 
+const TypingEffect = ({ text, speed = 150 }: { text: string; speed?: number }) => {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    setDisplayedText(""); // Reset on text change
+    const typingInterval = setInterval(() => {
+      if (i < text.length) {
+        setDisplayedText((prev) => prev + text.charAt(i));
+        i++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, speed);
+
+    return () => clearInterval(typingInterval);
+  }, [text, speed]);
+
+  return (
+    <div className="relative inline-block">
+      {displayedText}
+      <motion.span
+        className="absolute right-[-2px] top-0 bottom-0 w-1 bg-white"
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 1, repeat: Infinity }}
+      />
+    </div>
+  );
+};
+
+
 export default function HomePage() {
+  const [showTyping, setShowTyping] = useState(false);
+
+  useEffect(() => {
+    // Trigger typing animation after a short delay
+    const timer = setTimeout(() => {
+      setShowTyping(true);
+    }, 500); // Delay before typing starts
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -45,8 +90,11 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-7xl font-headline font-bold drop-shadow-lg">
             Solusi Otomotif Terpercaya
           </h1>
-          <p className="mt-6 max-w-2xl text-lg md:text-xl text-neutral-200">
-            Rawat kendaraan Anda dengan layanan profesional, suku cadang asli, dan harga terbaik dari Bengkel Bagema.
+          <div className="mt-4 text-3xl md:text-4xl font-headline font-bold text-neutral-200 h-12">
+            {showTyping && <TypingEffect text="Bengkel Bagema" />}
+          </div>
+          <p className="mt-4 max-w-2xl text-lg md:text-xl text-neutral-200">
+            Rawat kendaraan Anda dengan layanan profesional, suku cadang asli, dan harga terbaik.
           </p>
           <Button asChild size="lg" className="mt-8 group">
             <Link href="/kontak">
