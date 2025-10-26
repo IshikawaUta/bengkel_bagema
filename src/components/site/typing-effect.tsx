@@ -16,7 +16,7 @@ const cursorVariants = {
   },
 };
 
-export function TypingEffect({ text, speed = 100 }: { text: string, speed?: number }) {
+export function TypingEffect({ text, speed = 50 }: { text: string, speed?: number }) {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
