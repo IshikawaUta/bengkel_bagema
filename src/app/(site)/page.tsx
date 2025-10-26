@@ -28,6 +28,7 @@ const highlights = [
 ];
 
 export default function HomePage() {
+
   return (
     <>
       {/* Hero Section */}
