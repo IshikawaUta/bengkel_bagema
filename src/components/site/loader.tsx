@@ -8,7 +8,7 @@ export const Loader = ({ className }: { className?: string }) => {
       <div className="animate-pulse">
         <Logo width={120} />
       </div>
-      <p className="text-3xl md:text-4xl font-headline font-bold text-neutral-800 h-12">
+      <p className="text-3xl md:text-4xl font-headline font-bold text-primary uppercase h-12">
         <TypingEffect text="Bengkel Bagema" />
       </p>
     </div>
