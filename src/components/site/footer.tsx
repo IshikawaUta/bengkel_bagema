@@ -12,7 +12,7 @@ const navItems = [
 const socialLinks = [
   {
     name: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/bengkel_bagema?igsh=eW1ub2N2czI2dWl1",
     icon: <Instagram className="h-6 w-6" />,
   },
   {
