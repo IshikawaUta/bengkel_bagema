@@ -24,7 +24,7 @@ export default function AboutUsPage() {
 
       <main className="container py-16 sm:py-24">
         {/* History Section */}
-        <section className="grid md:grid-cols-1 gap-12 md:gap-16 items-center">
+        <section className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="prose-lg max-w-none text-muted-foreground">
             <h2 className="text-3xl font-headline font-bold text-gray-900">Sejarah Kami</h2>
             <p>
@@ -33,6 +33,19 @@ export default function AboutUsPage() {
             <p>
               Selama lebih dari satu dekade, kami telah melayani ribuan pelanggan dan terus berinovasi dengan teknologi terbaru serta pelatihan berkelanjutan untuk tim kami. Kepercayaan Anda adalah aset terbesar kami, dan kami berkomitmen untuk menjaganya setiap hari.
             </p>
+          </div>
+          <div className="order-first md:order-last">
+            {aboutImage && (
+                <div className="aspect-video w-full relative overflow-hidden rounded-lg shadow-lg">
+                    <Image
+                        src={aboutImage.imageUrl}
+                        alt={aboutImage.description}
+                        data-ai-hint={aboutImage.imageHint}
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            )}
           </div>
         </section>
 
