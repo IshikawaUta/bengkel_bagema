@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -48,30 +46,18 @@ export default function EmployeesPage() {
       </header>
       <main className="container py-16 sm:py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {employees.map((employee) => {
-            const image = PlaceHolderImages.find(
-              (img) => img.id === employee.imageId
-            );
-            return (
+          {employees.map((employee) => (
               <Card key={employee.name} className="text-center shadow-sm border transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
                 <CardContent className="pt-8">
-                  <Avatar className="h-32 w-32 mx-auto border-4 border-white shadow-lg">
-                    {image && (
-                      <AvatarImage
-                        src={image.imageUrl}
-                        alt={`Potret ${employee.name}`}
-                        data-ai-hint={image.imageHint}
-                      />
-                    )}
-                    <AvatarFallback>{employee.name.charAt(0)}</AvatarFallback>
+                  <Avatar className="h-32 w-32 mx-auto border-4 border-white shadow-lg text-4xl">
+                    <AvatarFallback>{employee.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
                   <h3 className="mt-6 text-xl font-bold text-gray-900">{employee.name}</h3>
                   <p className="text-primary font-semibold">{employee.title}</p>
                   <p className="mt-2 text-sm text-muted-foreground">{employee.bio}</p>
                 </CardContent>
               </Card>
-            );
-          })}
+            ))}
         </div>
       </main>
     </>
