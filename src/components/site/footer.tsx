@@ -31,11 +31,6 @@ const socialLinks = [
     ),
   },
   {
-    name: "YouTube",
-    href: "#",
-    icon: <Youtube className="h-6 w-6" />,
-  },
-  {
     name: "WhatsApp",
     href: "#",
     icon: (
