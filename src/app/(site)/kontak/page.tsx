@@ -30,7 +30,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-lg">Alamat</h3>
                   <p className="text-muted-foreground">
-                    Jl. Otomotif Raya No. 123, Jakarta, Indonesia
+                    Jl. Gading Serpong Boulevard, Blok H/32, Tangerang, Indonesia
                   </p>
                 </div>
               </div>

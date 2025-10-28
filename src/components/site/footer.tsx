@@ -86,8 +86,8 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground">Hubungi Kami</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Jl. Otomotif Raya No. 123</li>
-              <li>Jakarta, Indonesia</li>
+              <li>Jl. Gading Serpong Boulevard, Blok H/32</li>
+              <li>Tangerang, Indonesia</li>
               <li className="pt-2">
                 <a href="mailto:info@bengkelbagema.com" className="hover:text-primary transition-colors">info@bengkelbagema.com</a>
               </li>
