@@ -92,7 +92,7 @@ export function Footer() {
                 <a href="mailto:info@bengkelbagema.com" className="hover:text-primary transition-colors">info@bengkelbagema.com</a>
               </li>
               <li>
-                <a href="tel:+62211234567" className="hover:text-primary transition-colors">(021) 123-4567</a>
+                <a href="tel:+6282261099776" className="hover:text-primary transition-colors">+62 822-6109-9776</a>
               </li>
             </ul>
           </div>

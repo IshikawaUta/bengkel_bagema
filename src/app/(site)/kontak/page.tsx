@@ -51,7 +51,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Telepon</h3>
-                  <p className="text-muted-foreground">(021) 123-4567</p>
+                  <a href="tel:+6282261099776" className="text-muted-foreground hover:text-primary transition-colors">
+                    +62 822-6109-9776
+                  </a>
                 </div>
               </div>
             </div>
