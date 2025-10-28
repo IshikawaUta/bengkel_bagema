@@ -25,6 +25,11 @@ const highlights = [
     title: "Harga Kompetitif",
     description: "Dapatkan layanan terbaik dengan harga yang transparan dan terjangkau.",
   },
+  {
+    icon: <CheckCircle className="h-8 w-8 text-primary" />,
+    title: "Kejujuran Terjamin",
+    description: "Kami bekerja dengan transparan dan jujur dalam setiap layanan yang kami berikan.",
+  },
 ];
 
 const divisions = [
@@ -96,7 +101,7 @@ export default function HomePage() {
               Kami berkomitmen untuk memberikan pelayanan terbaik dengan standar kualitas tertinggi.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (
               <Card key={index} className="text-center shadow-sm border-t-4 border-primary transition-shadow duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader>
