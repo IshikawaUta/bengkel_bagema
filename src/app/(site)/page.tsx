@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Wrench, Truck, Clock, Flag } from "lucide-react";
 
 const heroImage = PlaceHolderImages.find((img) => img.id === "hero");
 
@@ -26,6 +26,29 @@ const highlights = [
     description: "Dapatkan layanan terbaik dengan harga yang transparan dan terjangkau.",
   },
 ];
+
+const divisions = [
+  {
+    icon: <Wrench className="h-8 w-8 text-primary" />,
+    title: "Workshop",
+    description: "Layanan perbaikan umum dan perbaikan bodi untuk semua jenis kendaraan.",
+  },
+  {
+    icon: <Truck className="h-8 w-8 text-primary" />,
+    title: "Mobile Services",
+    description: "Tune up, ganti oli, servis rem, dan komputerisasi langsung di lokasi Anda.",
+  },
+  {
+    icon: <Clock className="h-8 w-8 text-primary" />,
+    title: "Quick Services",
+    description: "Layanan cepat dengan target pengerjaan di bawah 120 menit.",
+  },
+  {
+    icon: <Flag className="h-8 w-8 text-primary" />,
+    title: "Racing Team",
+    description: "Dukungan penuh untuk kebutuhan balap, dari persiapan hingga di lintasan.",
+  },
+]
 
 export default function HomePage() {
 
@@ -84,6 +107,35 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{highlight.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Divisions Section */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-gray-900">
+              Divisi Layanan Kami
+            </h2>
+            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+              Menyediakan solusi lengkap untuk segala kebutuhan otomotif Anda.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {divisions.map((division, index) => (
+              <Card key={index} className="text-center shadow-sm border-t-4 border-primary transition-shadow duration-300 hover:shadow-xl hover:-translate-y-2">
+                <CardHeader>
+                  <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
+                    {division.icon}
+                  </div>
+                  <CardTitle className="mt-4 !text-xl font-bold text-gray-900">{division.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{division.description}</p>
                 </CardContent>
               </Card>
             ))}
