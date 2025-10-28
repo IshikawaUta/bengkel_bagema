@@ -60,8 +60,16 @@ export default function ContactPage() {
             {/* Map Placeholder */}
             <div className="mt-8">
               <h3 className="text-2xl font-bold font-headline mb-4 text-gray-900">Lokasi Kami</h3>
-              <div className="aspect-video w-full bg-muted rounded-lg flex items-center justify-center border">
-                <p className="text-muted-foreground">[Peta Lokasi Google Maps]</p>
+              <div className="aspect-video w-full rounded-lg overflow-hidden border">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0678871416117!2d106.62104939999999!3d-6.2547868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fd8420d57fcb%3A0xbf813aca551a6d9!2sBMS%20Bursa%20Mobil%20Summarecon%2C%20Gading%20Serpong!5e0!3m2!1sid!2sid!4v1761663814057!5m2!1sid!2sid" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border:0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
               </div>
             </div>
           </div>
