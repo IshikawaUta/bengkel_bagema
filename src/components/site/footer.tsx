@@ -17,7 +17,7 @@ const socialLinks = [
   },
   {
     name: "TikTok",
-    href: "#",
+    href: "https://www.tiktok.com/@bengkel.bagema?_t=ZS-90ru69SKZGa&_r=1",
     icon: (
       <svg
         className="h-6 w-6"
