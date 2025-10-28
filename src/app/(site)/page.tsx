@@ -55,7 +55,7 @@ export default function HomePage() {
             Rawat kendaraan Anda dengan layanan profesional, suku cadang asli, dan harga terbaik.
           </p>
           <Button asChild size="lg" className="mt-8 group">
-            <Link href="/kontak">
+            <Link href="https://wa.me/+6282261099776" target="_blank" rel="noopener noreferrer">
               Jadwalkan Servis <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

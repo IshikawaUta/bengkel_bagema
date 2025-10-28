@@ -98,7 +98,7 @@ export function Header() {
 
         <div className="hidden md:flex items-center justify-end">
             <Button asChild>
-                <Link href="/kontak">Jadwalkan Servis</Link>
+                <Link href="https://wa.me/+6282261099776" target="_blank" rel="noopener noreferrer">Jadwalkan Servis</Link>
             </Button>
         </div>
       </div>
