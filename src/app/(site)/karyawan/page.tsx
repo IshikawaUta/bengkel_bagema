@@ -2,6 +2,11 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Karyawan',
+};
 
 const employees = [
   {

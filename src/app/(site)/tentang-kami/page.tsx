@@ -2,6 +2,11 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Eye, Target, ShieldCheck } from "lucide-react";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tentang Kami',
+};
 
 const aboutImage = PlaceHolderImages.find((img) => img.id === "about");
 
