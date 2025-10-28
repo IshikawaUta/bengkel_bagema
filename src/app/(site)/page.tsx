@@ -89,7 +89,7 @@ export default function HomePage() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-headline font-bold drop-shadow-lg">
             Solusi Otomotif Terpercaya
@@ -109,10 +109,10 @@ export default function HomePage() {
       </section>
 
       {/* Highlights Section */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-background">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">
               Mengapa Memilih Kami?
             </h2>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
@@ -126,7 +126,7 @@ export default function HomePage() {
                   <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
                     {highlight.icon}
                   </div>
-                  <CardTitle className="mt-4 !text-xl font-bold text-gray-900">{highlight.title}</CardTitle>
+                  <CardTitle className="mt-4 !text-xl font-bold text-foreground">{highlight.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{highlight.description}</p>
@@ -138,10 +138,10 @@ export default function HomePage() {
       </section>
 
       {/* Divisions Section */}
-      <section className="py-20 sm:py-28 bg-gray-50">
+      <section className="py-20 sm:py-28 bg-muted/40">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">
               Divisi Layanan Kami
             </h2>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
@@ -155,7 +155,7 @@ export default function HomePage() {
                   <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit">
                     {division.icon}
                   </div>
-                  <CardTitle className="mt-4 !text-xl font-bold text-gray-900">{division.title}</CardTitle>
+                  <CardTitle className="mt-4 !text-xl font-bold text-foreground">{division.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{division.description}</p>
@@ -167,10 +167,10 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-background">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">
               Apa Kata Pelanggan Kami
             </h2>
             <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
@@ -189,7 +189,7 @@ export default function HomePage() {
                   <blockquote className="text-muted-foreground italic">"{testimonial.quote}"</blockquote>
                 </CardContent>
                 <div className="p-6 pt-4">
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
+                  <p className="font-bold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                 </div>
               </Card>
@@ -199,9 +199,9 @@ export default function HomePage() {
       </section>
 
       {/* About Snippet */}
-      <section className="py-20 sm:py-28 bg-gray-50">
+      <section className="py-20 sm:py-28 bg-muted/40">
         <div className="container text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">
               Tentang Bengkel Bagema
             </h2>
             <p className="mt-4 max-w-3xl mx-auto text-muted-foreground text-lg">

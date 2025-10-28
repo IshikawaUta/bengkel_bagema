@@ -12,7 +12,7 @@ export default function SiteLayout({
 }>) {
 
   return (
-    <div className="relative flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen flex-col bg-background">
         <PageTransition>
           <Header />
           <main className="flex-1">{children}</main>
