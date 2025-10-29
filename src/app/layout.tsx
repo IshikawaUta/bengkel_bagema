@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'Bengkel Bagema',
     template: '%s | Bengkel Bagema',
   },
-  description: 'Profil Perusahaan Bengkel Bagema',
+  description: 'Bengkel Bagema: Layanan otomotif jujur, profesional, dan transparan. Solusi terpercaya untuk kendaraan Anda.',
 };
 
 export default function RootLayout({
