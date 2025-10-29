@@ -92,7 +92,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-headline font-bold drop-shadow-lg">
-            Solusi Otomotif Terpercaya
+            Bengkel Bagema No Tipu-Tipu
           </h1>
           <p className="mt-4 text-3xl md:text-4xl font-headline font-bold text-neutral-200 h-12">
             Bengkel Bagema
